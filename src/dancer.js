@@ -8,10 +8,9 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left)
 };
 
-makeDancer.prototype.step = function(obj) {
+makeDancer.prototype.step = function() {
 
-    console.log('old', obj)
-    setTimeout(obj.step.bind(obj), obj.timeBetweenSteps);
+    setTimeout(this.step.bind(this), this.timeBetweenSteps);
     
 };
 
