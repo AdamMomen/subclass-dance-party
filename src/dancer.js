@@ -5,7 +5,7 @@ class Dancer {
     this.timeBetweenSteps = timeBetweenSteps;
     this.$node = $('<span class="dancer"></span>');
     this.step();
-    this.setPosition();
+    this.setPosition(top, left);
   }
 
   step() {
