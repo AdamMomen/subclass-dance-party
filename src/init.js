@@ -2,6 +2,8 @@ $(document).ready(function() {
   window.dancers = [];
   window.Dancer = Dancer;
   window.BlinkyDancer = BlinkyDancer;
+  window.SpidyDancer = SpidyDancer;
+
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -28,6 +30,8 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    // Push Dancer to Dancers array
+    dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 });
