@@ -18,16 +18,31 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  position: fixed;
+  /*background-color: #555;*/
+}
+.addDancerButton, .title{
+  text-decoration: none;
+  font-family: monospace;
+  color: #fff !important;
 }
 .title{
-  background-color: #777;
+  /*background-color: #777;*/
 }
 .dancer{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
+
 .spidy{
-  background: white;
+  background: url(images/spidy.gif);
+  background-size: cover;
+  height: 15em;
+  width: 15em;
+  position: absolute;
+}
+
+.wich{
+  position: absolute;
 }

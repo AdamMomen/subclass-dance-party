@@ -3,9 +3,13 @@ $(document).ready(function() {
   window.Dancer = Dancer;
   window.BlinkyDancer = BlinkyDancer;
   window.SpidyDancer = SpidyDancer;
+  window.WichDancer = WichDancer;
+  var audioObj = new Audio('music/music.mp3');
 
 
   $('.addDancerButton').on('click', function(event) {
+    event.preventDefault();
+    audioObj.play();
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -28,11 +32,23 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
+      // $('body').width() * Math.random(),
       Math.random() * 1000
     );
     // Push Dancer to Dancers array
     dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+  var top = 0;
+  $('body').on('click', '.align', function(){
+    console.log('click');
+    for(var dancer of dancers) {
+      console.log(top);
+      dancer.lineUp(top);
+      top += 90;
+    }
+  });
+
 });
 

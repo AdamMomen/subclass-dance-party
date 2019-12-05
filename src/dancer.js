@@ -20,4 +20,11 @@ class Dancer {
 
     this.$node.css(styleSettings);
   }
+
+  lineUp(top) {
+    this.$node.animate({
+      left:'0%',
+      top:top,
+    },1000);
+  }
 }
