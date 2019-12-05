@@ -41,9 +41,9 @@ $(document).ready(function() {
   });
 
   var top = 0;
-  $('body').on('click', '.align', function(){
+  $('body').on('click', '.align', function() {
     console.log('click');
-    for(var dancer of dancers) {
+    for( var dancer of dancers ) {
       console.log(top);
       dancer.lineUp(top);
       top += 90;
