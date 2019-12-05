@@ -21,9 +21,9 @@ class Dancer {
     this.$node.css(styleSettings);
   }
 
-  lineUp(top) {
+  lineUp(top, left) {
     this.$node.animate({
-      left:'0%',
+      left: `${left}%`,
       top:top,
     },1000);
   }

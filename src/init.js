@@ -39,14 +39,16 @@ $(document).ready(function() {
     dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+  var left = 10;
+  var top = 240;
 
-  var top = 0;
   $('body').on('click', '.align', function() {
-    console.log('click');
-    for( var dancer of dancers ) {
-      console.log(top);
-      dancer.lineUp(top);
-      top += 90;
+    // console.log('click');
+    for ( var dancer of dancers ) {
+      // console.log(top,left);
+      dancer.lineUp(top, left);
+      top += 25;
+      left--;
     }
   });
 
