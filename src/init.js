@@ -50,6 +50,9 @@ $(document).ready(function() {
       top += 25;
       left--;
     }
+
+    left = 10;
+    top = 240;
   });
 
 });

@@ -15,8 +15,18 @@ class WichDancer extends Dancer {
   }
 
   move() {
+    let half = window.innerWidth / 2;
+    let oldLeft = this.left - 300;
+
     this.$node.animate({
-      top: '-25px'
+      left: half,
     }, 500);
+
+    setTimeout(()=>{
+      console.log('done', oldLeft);
+      this.$node.animate({
+        left: oldLeft
+      }, 500);
+    }, 2000);
   }
 }
